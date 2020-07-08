@@ -30,4 +30,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="hapus data mahasiswa" />
+
+    <Button
+        android:id="@+id/button_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Aplikasi" />
 </LinearLayout>

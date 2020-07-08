@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button_tambahdata;
     private Button button_lihatdata;
     private Button button_hapusdata;
+    private Button button_about;
     private DBHandler dbHandler;
     SharedPref sharedPref;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         button_tambahdata = (Button) findViewById(R.id.button_tambahdata);
         button_lihatdata = (Button) findViewById(R.id.button_lihatdata);
         button_hapusdata = (Button) findViewById(R.id.button_hapusdata);
+        button_about = (Button) findViewById(R.id.button_about);
 
         button_tambahdata.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 dbHandler.hapusSemuaDataMahasiswa();
                 Toast.makeText(MainActivity.this, "Berhasil Menghapus Semua Data Mahasiswa", Toast.LENGTH_SHORT).show();
+            }
+        });
+        button_about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AboutActivity.class));
             }
         });
     }
